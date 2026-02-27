@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Ahmed Sami Email Tool PRO 👑</title>
+<title>Ahmed Sami Email Manager PRO 👑</title>
 
 <style>
 body{
@@ -106,20 +106,35 @@ border-radius:8px;
 display:none
 }
 
-/* 📿 الأذكار */
+/* 📿 الأذكار يمين متحركة */
 .azkar{
 position:fixed;
-left:10px;
+right:10px;
 top:50%;
 transform:translateY(-50%);
 background:#3498db;
 color:white;
 padding:15px;
 border-radius:12px;
-width:160px;
+width:180px;
 text-align:center;
 font-weight:bold;
-box-shadow:0 6px 20px rgba(0,0,0,.15)
+box-shadow:0 6px 20px rgba(0,0,0,.15);
+animation: floatZekr 4s ease-in-out infinite;
+}
+
+@keyframes floatZekr{
+0%{transform:translateY(-50%) translateX(0)}
+50%{transform:translateY(-55%) translateX(-5px)}
+100%{transform:translateY(-50%) translateX(0)}
+}
+
+/* 📱 Responsive */
+@media (max-width:768px){
+.container{padding:15px}
+input{width:90%}
+.email{font-size:16px}
+.azkar{display:none} /* نخفي الأذكار في الموبايل علشان المساحة */
 }
 </style>
 </head>
@@ -132,7 +147,7 @@ box-shadow:0 6px 20px rgba(0,0,0,.15)
 <div class="container">
 
 <div class="header">
-<h2>Ahmed Sami Email Tool PRO 🔥</h2>
+<h2>👑 Ahmed Sami Email Manager PRO 🔥</h2>
 <p>تصميم وتطوير: <span>أحمد سامي</span></p>
 </div>
 
@@ -262,14 +277,23 @@ t.style.display="block";
 setTimeout(()=>t.style.display="none",2000);
 }
 
-/* 📿 الأذكار */
+/* 📿 أذكار كثيرة */
 const azkar=[
-"سبحان الله",
-"الحمد لله",
-"الله أكبر",
-"صلِّ على النبي ﷺ",
-"لا إله إلا الله",
-"سبحان الله وبحمده"
+"سبحان الله 🤍",
+"الحمد لله 💛",
+"الله أكبر 🕌",
+"لا إله إلا الله ☝️",
+"صلِّ على النبي ﷺ ❤️",
+"سبحان الله وبحمده 🌸",
+"سبحان الله العظيم 🌺",
+"استغفر الله 🤲",
+"لا حول ولا قوة إلا بالله 💫",
+"اللهم صل وسلم على نبينا محمد ﷺ",
+"اللهم اغفر لي ولوالدي",
+"اللهم ارزقني رزقاً حلالاً طيباً",
+"يا رب اكتب لي الخير حيث كان",
+"اللهم فرج همي ويسر أمري",
+"اللهم اجعل القرآن ربيع قلبي"
 ];
 
 setInterval(()=>{
